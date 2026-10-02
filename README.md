@@ -1,24 +1,28 @@
-# AI spam Detector
+# AI Spam Message Detector
 
-Implement exactly the screenshot and nothing else
+An AI/NLP-based web application that analyzes messages
+and detects whether they are spam or safe.
 
-This project was built with [Lovable](https://lovable.dev).
+## Features
+- Spam / Not Spam detection
+- AI confidence score
+- Risk level
+- Suspicious keyword detection
+- URL detection
+- Analysis history
+- Safety score
+- Spam statistics
+- Safety tips
 
-## Build with Lovable
+## Tech Stack
+- React
+- TypeScript
+- Tailwind CSS
+- NLP / AI-based text analysis
+- LocalStorage
 
-Continue developing this project in the [Lovable editor](https://lovable.dev/projects/d6af302f-fd7f-474c-98f2-bd8704abda03).
-
-- **Ship faster**: describe what you want to build and Lovable handles the code.
-- **Stay in sync**: every change made in Lovable is committed straight to this repository.
-- **Full ownership**: this code is yours. Push to `main` on GitHub and your changes sync back into Lovable, ready for your next prompt.
-
-## Development
-
-Prefer working locally? You need Node.js and npm — [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating).
-
-```sh
-git clone <this-repository-url>
-cd <repository-name>
-npm i
-npm run dev
-```
+## Real-World Applications
+- SMS spam detection
+- Phishing detection
+- Scam prevention
+- Email filtering
