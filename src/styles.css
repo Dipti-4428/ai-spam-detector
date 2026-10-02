@@ -142,3 +142,37 @@
     color: var(--color-foreground);
   }
 }
+
+:root {
+  --radius: 1rem;
+  --background: oklch(0.985 0.005 240);
+  --primary: oklch(0.55 0.17 250);
+  --primary-foreground: oklch(0.99 0 0);
+  --ring: oklch(0.55 0.17 250);
+  --spam: oklch(0.6 0.21 25);
+  --spam-foreground: oklch(0.99 0 0);
+  --safe: oklch(0.62 0.15 155);
+  --safe-foreground: oklch(0.99 0 0);
+}
+@theme inline {
+  --color-spam: var(--spam);
+  --color-spam-foreground: var(--spam-foreground);
+  --color-safe: var(--safe);
+  --color-safe-foreground: var(--safe-foreground);
+  --shadow-soft: 0 10px 30px -12px oklch(0.55 0.17 250 / 0.35);
+}
+@layer components {
+  .card { @apply rounded-2xl border border-border bg-card p-5 shadow-sm; }
+  .btn-primary { @apply inline-flex items-center gap-2 rounded-xl bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground shadow-soft transition hover:opacity-90 disabled:opacity-50; }
+  .btn-secondary { @apply inline-flex items-center gap-2 rounded-xl border border-border bg-card px-5 py-2.5 text-sm font-semibold text-foreground transition hover:bg-muted; }
+  .chip { @apply rounded-full border border-border bg-muted px-3 py-1.5 text-xs font-medium text-foreground transition hover:border-primary hover:text-primary; }
+  .chip-static { @apply inline-flex items-center gap-2 rounded-xl border border-border bg-card px-4 py-2 text-sm text-foreground; }
+  .section-title { @apply mb-4 flex items-center gap-2 text-lg font-semibold text-foreground; }
+  .keyword { @apply rounded-md bg-spam/10 px-2 py-1 text-xs font-medium text-spam; }
+  .result-card { @apply rounded-2xl border-2 bg-card p-6 shadow-sm; animation: pop 0.45s cubic-bezier(.2,.9,.3,1.2); }
+  .result-spam { @apply border-spam/40; }
+  .result-safe { @apply border-safe/40; }
+  .bar { animation: grow 0.9s ease-out; }
+}
+@keyframes pop { from { opacity: 0; transform: translateY(12px) scale(.97); } to { opacity: 1; transform: none; } }
+@keyframes grow { from { width: 0; } }
