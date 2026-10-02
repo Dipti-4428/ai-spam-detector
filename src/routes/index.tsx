@@ -88,7 +88,7 @@ function Index() {
           </div>
         </section>
 
-        {result && <ResultCard key={JSON.stringify(result) + Math.random()} r={result} />}
+        {result && <ResultCard key={stats.total} r={result} />}
 
         <section className="mt-10">
           <h2 className="section-title"><BarChart3 className="h-5 w-5" /> Statistics</h2>
