@@ -1,3 +1,11 @@
+# 🤖 AI Spam Message Detector
+
+An AI-powered web application that detects spam, scam, and suspicious messages.
+
+## 🚀 Live Demo
+
+👉  https://ai-spam-detector-omega.vercel.app/
+
 # AI Spam Message Detector
 
 An AI/NLP-based web application that analyzes messages
@@ -26,3 +34,17 @@ and detects whether they are spam or safe.
 - Phishing detection
 - Scam prevention
 - Email filtering
+
+## 📸 Screenshots
+
+### 🏠 Home Page
+![Home Page]
+
+### 🚨 Spam Detection
+![Spam Detection]
+
+### ✅ Safe Message
+![Safe Message]
+
+### 📊 Dashboard
+![Dashboard]
