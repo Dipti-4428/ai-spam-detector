@@ -176,3 +176,30 @@
 }
 @keyframes pop { from { opacity: 0; transform: translateY(12px) scale(.97); } to { opacity: 1; transform: none; } }
 @keyframes grow { from { width: 0; } }
+
+/* v2: blue/purple AI theme */
+:root {
+  --background: oklch(0.982 0.008 270);
+  --primary: oklch(0.52 0.2 275);
+  --ring: oklch(0.52 0.2 275);
+  --warn: oklch(0.72 0.16 70);
+  --whatsapp: oklch(0.93 0.04 150);
+  --brand-from: oklch(0.55 0.19 255);
+  --brand-to: oklch(0.52 0.22 300);
+}
+@theme inline {
+  --color-warn: var(--warn);
+  --color-whatsapp: var(--whatsapp);
+}
+@layer components {
+  .bg-gradient-brand { background-image: linear-gradient(135deg, var(--brand-from), var(--brand-to)); }
+  .text-gradient-brand { background-image: linear-gradient(135deg, var(--brand-from), var(--brand-to)); -webkit-background-clip: text; background-clip: text; color: transparent; }
+  .btn-primary { background-image: linear-gradient(135deg, var(--brand-from), var(--brand-to)); }
+  .nav-link { @apply rounded-lg px-3 py-2 text-sm font-medium text-muted-foreground transition hover:bg-muted hover:text-foreground; }
+  .tab { @apply inline-flex items-center gap-2 rounded-lg border border-border bg-card px-3 py-1.5 text-sm text-muted-foreground transition hover:text-foreground; }
+  .tab-active { @apply border-primary bg-primary/10 text-primary; }
+  .badge { @apply inline-block rounded-md px-2 py-0.5 text-xs font-bold; }
+  .badge-high { @apply bg-spam/15 text-spam; }
+  .badge-medium { @apply bg-warn/20 text-warn; }
+  .badge-low { @apply bg-safe/15 text-safe; }
+}
